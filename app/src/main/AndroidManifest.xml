@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestApp">
         <activity
-            android:windowSoftInputMode="adjustResize"
+            android:name=".TestQuestionsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/CustomActionBar"
-            android:name=".MainActivity">
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

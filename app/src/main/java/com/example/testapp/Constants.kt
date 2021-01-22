@@ -8,7 +8,7 @@ object Constants {
         val question1 = Question(
             1,
             "Third president of Georgia",
-            R.drawable.ic_background,
+            R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
             "Zviad Gamsakhurdia",
@@ -18,7 +18,7 @@ object Constants {
         val question2 = Question(
             1,
             "Third president of Georgia",
-            R.drawable.ic_background,
+            R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
             "Zviad Gamsakhurdia",
@@ -28,7 +28,7 @@ object Constants {
         val question3 = Question(
             1,
             "Third president of Georgia",
-            R.drawable.ic_background,
+            R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
             "Zviad Gamsakhurdia",
@@ -38,7 +38,7 @@ object Constants {
         val question4 = Question(
             1,
             "Third president of Georgia",
-            R.drawable.ic_background,
+            R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
             "Zviad Gamsakhurdia",
@@ -48,7 +48,7 @@ object Constants {
         val question5 = Question(
             1,
             "Third president of Georgia",
-            R.drawable.ic_background,
+            R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
             "Zviad Gamsakhurdia",
@@ -58,7 +58,7 @@ object Constants {
         val question6 = Question(
             1,
             "Third president of Georgia",
-            R.drawable.ic_background,
+            R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
             "Zviad Gamsakhurdia",
@@ -68,7 +68,7 @@ object Constants {
         val question7 = Question(
             1,
             "Third president of Georgia",
-            R.drawable.ic_background,
+            R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
             "Zviad Gamsakhurdia",
@@ -78,7 +78,7 @@ object Constants {
         val question8 = Question(
             1,
             "Third president of Georgia",
-            R.drawable.ic_background,
+            R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
             "Zviad Gamsakhurdia",
@@ -88,7 +88,7 @@ object Constants {
         val question9 = Question(
             1,
             "Third president of Georgia",
-            R.drawable.ic_background,
+            R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
             "Zviad Gamsakhurdia",
@@ -98,7 +98,7 @@ object Constants {
         val question10 = Question(
             1,
             "Third president of Georgia",
-            R.drawable.ic_background,
+            R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
             "Zviad Gamsakhurdia",

@@ -17,7 +17,7 @@ object Constants {
         )
         val question2 = Question(
             1,
-            "Third president of Georgia",
+            "2Third president of Georgia",
             R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
@@ -27,7 +27,7 @@ object Constants {
         )
         val question3 = Question(
             1,
-            "Third president of Georgia",
+            "3Third president of Georgia",
             R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
@@ -37,7 +37,7 @@ object Constants {
         )
         val question4 = Question(
             1,
-            "Third president of Georgia",
+            "4Third president of Georgia",
             R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
@@ -47,7 +47,7 @@ object Constants {
         )
         val question5 = Question(
             1,
-            "Third president of Georgia",
+            "5Third president of Georgia",
             R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
@@ -57,7 +57,7 @@ object Constants {
         )
         val question6 = Question(
             1,
-            "Third president of Georgia",
+            "6Third president of Georgia",
             R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
@@ -67,7 +67,7 @@ object Constants {
         )
         val question7 = Question(
             1,
-            "Third president of Georgia",
+            "7Third president of Georgia",
             R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
@@ -77,7 +77,7 @@ object Constants {
         )
         val question8 = Question(
             1,
-            "Third president of Georgia",
+            "8Third president of Georgia",
             R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
@@ -87,7 +87,7 @@ object Constants {
         )
         val question9 = Question(
             1,
-            "Third president of Georgia",
+            "9Third president of Georgia",
             R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",
@@ -97,7 +97,7 @@ object Constants {
         )
         val question10 = Question(
             1,
-            "Third president of Georgia",
+            "10Third president of Georgia",
             R.drawable.misha,
             "Eduard Shevardnadze",
             "Mikheil Saakashvili",

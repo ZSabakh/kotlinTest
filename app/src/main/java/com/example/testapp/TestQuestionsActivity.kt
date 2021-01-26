@@ -6,9 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
+import android.widget.*
 import androidx.core.content.ContextCompat
 
 class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
@@ -25,6 +23,7 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     var tvAnswerThree: TextView? = null
     var tvAnswerFour: TextView? = null
     var ivImage: ImageView? = null
+    var btnSubmit: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +36,8 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvAnswerThree = findViewById<TextView>(R.id.tv_option_three)
         tvAnswerFour = findViewById<TextView>(R.id.tv_option_four)
         ivImage = findViewById<ImageView>(R.id.iv_image)
+        btnSubmit = findViewById<Button>(R.id.btn_submit)
+
         questionsList = Constants.getQuestions()
         setQuestion()
 
@@ -44,13 +45,17 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvAnswerTwo!!.setOnClickListener(this)
         tvAnswerThree!!.setOnClickListener(this)
         tvAnswerFour!!.setOnClickListener(this)
+        btnSubmit!!.setOnClickListener(this)
     }
 
     private fun setQuestion() {
-        currentPosition = 1;
         val question = questionsList!![currentPosition - 1]
         defaultOptionView()
-
+        if(currentPosition == questionsList!!.size){
+            btnSubmit!!.text = "Finish"
+        }else{
+            btnSubmit!!.text = "Answer"
+        }
 
         progressBar!!.progress = currentPosition
         tvProgress!!.text = (currentPosition.toString() + "0%")
@@ -78,6 +83,31 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    private fun answerView(answer: Int, drawableView: Int) {
+        when (answer) {
+            1 -> {
+                tvAnswerOne!!.background = ContextCompat.getDrawable(
+                    this, drawableView
+                )
+            }
+            2 -> {
+                tvAnswerTwo!!.background = ContextCompat.getDrawable(
+                    this, drawableView
+                )
+            }
+            3 -> {
+                tvAnswerThree!!.background = ContextCompat.getDrawable(
+                    this, drawableView
+                )
+            }
+            4 -> {
+                tvAnswerFour!!.background = ContextCompat.getDrawable(
+                    this, drawableView
+                )
+            }
+        }
+    }
+
     private fun selectedOptionView(tv: TextView, selectedOptionNumber: Int) {
         defaultOptionView()
         selectedOptionPosition = selectedOptionNumber
@@ -90,20 +120,47 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.tv_option_one ->{
+        when (v?.id) {
+            R.id.tv_option_one -> {
                 selectedOptionView(tvAnswerOne!!, 1)
             }
-            R.id.tv_option_two ->{
+            R.id.tv_option_two -> {
                 selectedOptionView(tvAnswerTwo!!, 2)
             }
-            R.id.tv_option_three ->{
+            R.id.tv_option_three -> {
                 selectedOptionView(tvAnswerThree!!, 3)
             }
-            R.id.tv_option_four ->{
+            R.id.tv_option_four -> {
                 selectedOptionView(tvAnswerFour!!, 4)
             }
-        }
+            R.id.btn_submit -> {
+                if (selectedOptionPosition == 0) {
+                    currentPosition++
 
+                    when {
+                        currentPosition <= questionsList!!.size -> {
+                            setQuestion()
+                        }
+                        else -> {
+                            Toast.makeText(this, "Test finished", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }else{
+                    val question = questionsList?.get(currentPosition - 1)
+                    if(question!!.correctChoice != selectedOptionPosition){
+                        answerView(selectedOptionPosition, R.drawable.option_wrong_background)
+                }
+                    answerView(question.correctChoice, R.drawable.option_correct_background)
+
+                    if(currentPosition == questionsList!!.size){
+                        btnSubmit!!.text = "Finish"
+                    }else{
+                        btnSubmit!!.text = "Next Question"
+                    }
+                    selectedOptionPosition = 0
+                }
+        }
     }
+
+}
 }
